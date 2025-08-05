@@ -1,0 +1,8 @@
+__pycache__/
+env/
+.idea
+data.s
+build/
+dist/
+main.spec
+print.pdf
