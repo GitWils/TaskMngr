@@ -25,10 +25,10 @@ class ProductTable(CustomWidgets.Table):
 		self.setDimensions()
 
 	def setDimensions(self) -> None:
-		self.setColumnWidth(0, 160)
+		self.setColumnWidth(0, 210)
 		self.setColumnWidth(1, 120)
 		self.setColumnHidden(2, True)
-		self.setFixedWidth(298)
+		self.setFixedWidth(348)
 
 	def getSelectedRowId(self) -> int:
 		index = self.currentIndex()

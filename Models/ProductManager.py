@@ -107,8 +107,7 @@ class ProductMngr:
 			self._db.updateAction(original_action.getId(), original_action.getProductId(), count, note)
 		balance = self.getBalanceByProductId(original_action.getProductId()) + (count - original_action.getCount())
 		msg = f'відредаговано переміщення <span style="text-decoration: underline">{original_action.getName()}</span> '\
-				f'-> залишок: <span style="text-decoration: underline">{balance:.2f}</span> кг'
-		#f'вагою <span style="text-decoration: underline">{abs(action.getCount()):.2f}</span>, кг'
+				f'-> залишок: <span style="text-decoration: underline">{balance}</span> шт.'
 		self._db.newLogMsg(original_action.getProductId(), msg)
 		self.reloadAll()
 

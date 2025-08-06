@@ -7,12 +7,12 @@ from datetime import datetime
 from pprint import pprint
 
 class ActionTable(CustomWidgets.Table):
-	def __init__(self, components: [Action] = None) -> None:
+	def __init__(self, components: {Action} = None) -> None:
 		super().__init__()
 		self._components = components
 		self.loadData(self._components)
 
-	def loadData(self, components: [Action]) -> None:
+	def loadData(self, components: {Action}) -> None:
 		""" load and reload data """
 		self._components = components
 		sti = TableModel(self._components)
@@ -26,7 +26,7 @@ class ActionTable(CustomWidgets.Table):
 		self.setDimensions()
 
 	def setDimensions(self) -> None:
-		self.setColumnWidth(0, 160)
+		self.setColumnWidth(0, 200)
 		self.setColumnWidth(1, 120)
 		self.setColumnWidth(2, 140)
 		self.setColumnWidth(3, 256)
@@ -48,7 +48,7 @@ class ActionTable(CustomWidgets.Table):
 		return True
 
 class TableModel(QtGui.QStandardItemModel):
-	def __init__(self, data :[Action]):
+	def __init__(self, data :{Action}):
 		super(TableModel, self).__init__()
 		self._data = data
 

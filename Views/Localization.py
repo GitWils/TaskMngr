@@ -79,7 +79,7 @@ class Translator:
 				'lbl.logs': 'Журнал подій:',
 
 				'table.name': 'Найменування',
-				'table.left': 'Залишок (шт)',
+				'table.left': 'Кількість (шт)',
 				'table.weight': 'Вага (кг)',
 				'table.count': 'Кількість (шт)',
 				'table.date': 'Дата',

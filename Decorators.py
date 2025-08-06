@@ -12,6 +12,6 @@ def Timing(func):
         start = time.time()
         result = func(*args, **kwargs)
         end = time.time()
-        print(f"Функція {func.__name__}() виконалась за {end - start} секунд")
+        print(f"Функція {func.__name__}() виконалась за {(end - start):0.3f} секунд")
         return result
     return wrapper
